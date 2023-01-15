@@ -1,0 +1,15 @@
+.project{
+    width: 450px;
+    background-color: blanchedalmond;
+}
+.image{
+    height: 300px;
+    background-color: #d6d6d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.viewBtn{
+    background-color: blanchedalmond;
+    padding: 10px 20px;
+}
