@@ -12,7 +12,7 @@ export const Project = (props: ProjectType) => {
             <div className={style.image}>
                 <div className={style.viewBtn}>Show</div>
             </div>
-            <h3> {props.title}</h3>
+            <h3 className={style.projectTitle}> {props.title}</h3>
             <div className={style.description}>{props.description}</div>
 
         </div>

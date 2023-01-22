@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.contactForm input, contactForm textarea{
+.contactForm input,.contactForm textarea{
     width: 100%;
 }
 .submitBtn{
