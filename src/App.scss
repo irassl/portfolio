@@ -1,5 +1,6 @@
+@import "./common/styles/sass/variables";
 .App {
-
+  background-color:  $bgColor;
 }
 
 .App-logo {
