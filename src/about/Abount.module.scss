@@ -1,0 +1,44 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+.aboutBlock{
+  background-color:  $bgColor;
+  padding: 100px 0;
+  .container{
+    @include container();
+    .title{
+      //@include text(inherit, 12px, 1.5,400);
+      position: relative !important;
+      display: flex !important;
+      justify-content: center;
+      //text-align: center ;
+      //align-items: center;
+      margin-bottom: 3rem !important;
+      h2{
+       // @include text($fontFamilyJosefinSans, 36px, 1.5,600);
+        font-size: calc(1.95rem + 8.4vw) !important;
+        font-weight: 600 !important;
+       // width: 100;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        opacity: 0.4;
+        margin-bottom: 0;
+      }
+      p{
+        @include text($fontFamilyJosefinSans, 36px, 1.5,600);
+       // font-size: 36px !important;
+        //font-size: 2.25rem !important;
+       // font-weight: 600 !important;
+        //   line-height: 1.5 !important;
+        text-align: center !important;
+        position: absolute !important;
+        align-self: center !important;
+
+        margin-bottom: -10% !important;
+
+
+
+      }
+    }
+  }
+}

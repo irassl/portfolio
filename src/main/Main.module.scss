@@ -2,72 +2,73 @@
 @import "../common/styles/sass/mixins.scss";
 
 .mainBlock {
-    height: 100vh;
-    @include flex(row,center,center, nowrap);
-    padding: 100px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .img {
+
+    position: absolute;
+    //top: 80px; // можно и 0 тогда будет навигация в картинке
+
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../assets/image/intro-bg.jpg");
-    opacity: 0.5;
+    opacity: 0.4;
+  }
 
-    .img{
-        z-index: 0;
-        background-attachment: fixed;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        transition: background-image 300ms ease-in 200ms;
+  .container {
+    @include container();
+    @include flex(row, space-around, center, wrap);
+    opacity: 1 !important;
 
+    .greeting {
+      @include flex(column, flex-start, flex-start, nowrap);
+
+      span {
+
+
+        font-size: 16px;
+        @include text($fontFamilyJosefinSans, 50px, 1.2, 700);
+        letter-spacing: 5px;
+        position: relative;
+        margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 16px;
+        @include text($fontFamilyJosefinSans, 50px, 1.2, 700);
+        margin: 0;
+        letter-spacing: 5px;
+        position: relative;
+      }
+
+      @media screen and (max-width: 1143px) {
+        align-items: center;
+      }
     }
-    .container {
-        @include container();
-        @include flex(row,space-around,center,wrap);
-        opacity: 1 !important;
-        .greeting{
-            @include flex(column,flex-start, flex-start,nowrap);
 
-            span{
-
-
-                font-size: 16px;
-                @include text($fontFamilyJosefinSans, 50px,1.2,700);
-                letter-spacing: 5px;
-                position: relative;
-                margin: 10px 0;
-            }
-            h1{
-
-                @include text($fontFamilyJosefinSans, 50px,1.2,700);
-                margin: 0;
-            }
-            @media screen and (max-width: 1143px) {
-                    align-items: center;
-            }
-        }
-
-        //height: 100%;
-        //width: 80%;
-        //margin: 0 auto;
-        //display: flex;
-        //align-items: center;
-        //justify-content: space-between;
-        .text {
-            width: 300px;
-            background-color: #f7f7f7;
-        }
-
-        .photo {
-            width: 300px;
-            height: 400px;
-            background-color: #f7f7f7;
-        }
+    //height: 100%;
+    //width: 80%;
+    //margin: 0 auto;
+    //display: flex;
+    //align-items: center;
+    //justify-content: space-between;
+    .text {
+      width: 300px;
+      background-color: #f7f7f7;
     }
+
+    .photo {
+      width: 300px;
+      height: 400px;
+      background-color: #f7f7f7;
+    }
+  }
 }
 
 

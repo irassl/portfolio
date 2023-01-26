@@ -1,0 +1,28 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+.nav {
+
+  //background-color: $bgSecondColor;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+  a {
+    @include text($fontFamilyPoppins, 16px, 1.2, 200);
+    color: $textColor;
+    cursor: pointer;
+
+    &:focus {
+      color: #20c997;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+  }
+
+  a:hover {
+    color: #20c997;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}

@@ -12,7 +12,7 @@ export const Projects = () => {
     }
 
     return (
-        <div className={style.projectBlock}>
+        <div id='projects' className={style.projectBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
                 <Title title={'Мои работы'}/>
                 <div className={style.projects}>

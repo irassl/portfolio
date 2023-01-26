@@ -6,20 +6,21 @@ import {Skills} from "./skills/Skills";
 import {Projects} from "./projects/Projects";
 import {Contacts} from "./contacts/Contacts";
 import {Footer} from "./footer/Footer";
-import Home from "./home/Home";
+import {About} from "./about/About";
+
 
 function App() {
-  return (
-    <div className="App">
-     <Header/>
-        <Main/>
-        {/*<Home/>*/}
-        <Skills/>
-        <Projects/>
-        <Contacts/>
-        <Footer/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header/>
+            <Main/>
+<About/>
+            <Skills/>
+            <Projects/>
+            <Contacts/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,17 @@
+@import "../common/styles/sass/variables";
+
+.header {
+    height: 80px;
+
+    width: 100%;
+    background-color:  $bgColor;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: sticky;
+
+    //overflow: hidden;
+    //position:fixed;
+
+
+}
