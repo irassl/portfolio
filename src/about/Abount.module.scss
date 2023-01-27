@@ -1,44 +1,209 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
 
-.aboutBlock{
-  background-color:  $bgColor;
-  padding: 100px 0;
-  .container{
-    @include container();
-    .title{
+.aboutBlock {
+  background-color: #212529!important;
+  position: relative;
+  padding: 4.5rem 0;
+  overflow: hidden;
+  @media(max-width: 575.98px) {
+    padding: 3.5rem 0
+  }
+
+  .container {
+    width: 100%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+    margin-right: auto;
+    margin-left: auto;
+
+    .title {
       //@include text(inherit, 12px, 1.5,400);
       position: relative !important;
       display: flex !important;
-      justify-content: center;
+      text-align: center !important;
       //text-align: center ;
       //align-items: center;
       margin-bottom: 3rem !important;
-      h2{
-       // @include text($fontFamilyJosefinSans, 36px, 1.5,600);
+
+      .aboutTitle {
+        // @include text($fontFamilyJosefinSans, 36px, 1.5,600);
         font-size: calc(1.95rem + 8.4vw) !important;
         font-weight: 600 !important;
-       // width: 100;
-        text-transform: uppercase;
-        color: #4a4a4a;
-        opacity: 0.4;
-        margin-bottom: 0;
+        line-height: 1.3;
+        width: 100% !important;
+        text-transform: uppercase !important;
+        opacity: .1;
+        margin-bottom: 0 !important;
+        margin-top: 0;
+        color: #6c757d !important
       }
-      p{
-        @include text($fontFamilyJosefinSans, 36px, 1.5,600);
-       // font-size: 36px !important;
+
+      @media(min-width: 1200px) {
+        .aboutTitle {
+          font-size: 8.25rem !important
+        }
+      }
+
+      .aboutTitleBg {
+        @include text($fontFamilyJosefinSans, 2.25rem, 1.5, 600);
         //font-size: 2.25rem !important;
-       // font-weight: 600 !important;
         //   line-height: 1.5 !important;
-        text-align: center !important;
-        position: absolute !important;
+        display: block;
         align-self: center !important;
+        //line-height: 1.5 !important;
+        //font-size: 2.25rem!important;
+        //font-weight: 600 !important;
+        position: absolute !important;
+        width: 100% !important;
+        margin-top: 0;
+        margin-bottom: 0 !important;
+        color: rgba(255, 255, 255, 1) !important;
+      }
 
-        margin-bottom: -10% !important;
+      .headingSeparatorLine {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 80px;
+        //border-bottom: 1px solid #dee2e6 !important;
+        //border-color: #20c997 !important;
+      }
+    }
 
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * 3rem);
+      margin-right: calc(-0.5 * 1.5rem);
+      margin-left: calc(-0.5 * 1.5rem);
+      & > * {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-left: calc(1.5rem * .5);
+        padding-right: calc(1.5rem * .5);
+        margin-top: 0
+      }
 
+      .aboutMe {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+        text-align: left !important;
+
+        h2 {
+          font-size: 1.75rem !important;
+          font-weight: 600 !important;
+          color: #ffffff;
+          margin-bottom: 1rem !important;
+        }
+
+        span {
+          color: #20c997 !important;
+        }
+
+        p {
+          margin-bottom: 1rem;
+          margin-top: 0;
+          line-height: 1.8;
+          color: hsla(0, 0%, 100%, .5) !important;
+        }
+      }
+
+      .personal {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+        --bs-gutter-y: 3rem;
+        --bs-gutter-x: 1.5rem;
+        //margin-top: var(--bs-gutter-y);
+        margin-top: 3rem;
+        max-width: 100%;
+        //padding-left: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(1.5rem * .5);
+        //padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-right: calc(1.5rem * .5);
+
+        .personalDetail {
+          padding-right: 1.5rem !important;
+          font-family: Poppins, sans-serif;
+          color: #dee3e4 !important;
+
+          ul {
+            padding: 0;
+            margin-bottom: 1rem;
+            margin-top: 0;
+          }
+
+          li {
+            list-style-type: none;
+            border-bottom: 1px solid hsla(0, 0%, 98%, .12);
+            padding-top: 12px;
+            padding-bottom: 12px
+          }
+
+          li:last-child {
+            border: 0;
+          }
+
+          a {
+            color: #20c997;
+            text-decoration: none;
+            transition: all .2s ease;
+          }
+
+          span {
+            font-weight: 600 !important;
+            margin-right: .5rem !important
+          }
+
+          .btn {
+            border-width: 2px;
+            font-weight: 500;
+            padding: 0.8rem 2.6rem;
+            transition: all .5s ease;
+            background-color: #20c997;
+            border-color: #20c997;
+            //@include text($fontFamilyJosefinSans, 1rem,1.2,300);
+            font-family: Poppins, sans-serif;
+            color: #dee3e4 !important;
+
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            --bs-border-radius-pill: 50rem;
+            border-radius: var(--bs-border-radius-pill) !important;
+            &:hover {
+              background-color: #20c997;
+              border-color: #20c997;
+            }
+          }
+        }
 
       }
+    }
+    @media (min-width: 576px) {
+      max-width: 540px
+    }
+
+    @media (min-width: 768px) {
+      max-width: 720px
+    }
+
+    @media (min-width: 992px) {
+      max-width: 960px
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 1140px
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 1320px
     }
   }
 }
