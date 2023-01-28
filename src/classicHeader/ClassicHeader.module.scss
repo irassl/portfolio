@@ -1,0 +1,41 @@
+@import "../common/styles/sass/mixins";
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  @include transition(all .5s ease);
+  .menu{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    height: auto !important;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    background: #fff;
+    border-bottom: 1px solid #efefef;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none;
+    border-bottom: 0 !important;
+    .containerFluid{
+      display: flex;
+      flex-wrap: inherit;
+      align-items: center;
+      justify-content: space-between;
+      position: relative !important;
+      --bs-gutter-x: 1.5rem;
+      .contentMenu{
+        flex: 0 0 auto;
+        width: 66.66666667%;
+       // position:initial;
+
+      }
+    }
+  }
+}

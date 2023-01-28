@@ -1,6 +1,12 @@
 @import "./common/styles/sass/variables";
-.App {
-  background-color:  $bgColor;
+@import "./common/styles/sass/mixins";
+#main-wrapper {
+  background:#fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include box-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
 }
 
+.box #main-wrapper {
 
+}

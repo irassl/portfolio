@@ -2,7 +2,7 @@
 @import "../common/styles/sass/mixins";
 
 .aboutBlock {
-  background-color: #212529!important;
+  background-color: #212529 !important;
   position: relative;
   padding: 4.5rem 0;
   overflow: hidden;
@@ -72,19 +72,7 @@
     }
 
     .content {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: calc(-1 * 3rem);
-      margin-right: calc(-0.5 * 1.5rem);
-      margin-left: calc(-0.5 * 1.5rem);
-      & > * {
-        flex-shrink: 0;
-        width: 100%;
-        max-width: 100%;
-        padding-left: calc(1.5rem * .5);
-        padding-right: calc(1.5rem * .5);
-        margin-top: 0
-      }
+      @include row();
 
       .aboutMe {
         flex: 0 0 auto;
@@ -177,6 +165,7 @@
             user-select: none;
             --bs-border-radius-pill: 50rem;
             border-radius: var(--bs-border-radius-pill) !important;
+
             &:hover {
               background-color: #20c997;
               border-color: #20c997;
@@ -186,6 +175,7 @@
 
       }
     }
+
     @media (min-width: 576px) {
       max-width: 540px
     }

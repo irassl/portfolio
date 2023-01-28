@@ -7,18 +7,26 @@ import {Projects} from "./projects/Projects";
 import {Contacts} from "./contacts/Contacts";
 import {Footer} from "./footer/Footer";
 import {About} from "./about/About";
+import {Home} from "./home/Home";
 
 
 function App() {
     return (
-        <div className="App">
+        <div className="">
+            <div className='main-wrapper'>
+                <div  id="content" role="main">
+
+
             <Header/>
-            <Main/>
-<About/>
+            {/*<Main/>*/}
+            <Home/>
+            <About/>
             <Skills/>
             <Projects/>
             <Contacts/>
+                </div>
             <Footer/>
+            </div>
         </div>
     );
 }

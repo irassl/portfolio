@@ -3,7 +3,7 @@ import style from './Abount.module.scss'
 
 export const About = () => {
     return (
-        <div className={style.aboutBlock}>
+        <div id={'about'}  className={style.aboutBlock}>
             <div className={style.container}>
                 <div className={style.title}>
                     <h2 className={style.aboutTitle}>

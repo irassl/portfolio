@@ -1,25 +1,108 @@
 @import "./variables";
 
-@mixin text($fontFamily, $fontSize, $lineHeight, $fontWeight){
+@mixin text($fontFamily, $fontSize, $lineHeight, $fontWeight) {
   font-family: $fontFamily;
   font-size: $fontSize;
   line-height: $lineHeight;
-  font-weight:  $fontWeight;
+  font-weight: $fontWeight;
   color: $textColor;
 }
-@mixin container(){
+
+@mixin container() {
   width: 80%;
   margin: 0 auto;
 }
-@mixin flex($direction,$justifyContent, $alignItems, $wrap){
+
+@mixin flex($direction,$justifyContent, $alignItems, $wrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justifyContent;
   align-items: $alignItems;
   flex-wrap: $wrap;
 }
-@mixin  bgSettings(){
+
+@mixin bgSettings() {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@mixin containerNew() {
+  width: 100%;
+  padding-right: calc(1.5rem * .5);
+  padding-left: calc(1.5rem * .5);
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 540px
+  }
+  @media (min-width: 768px) {
+    max-width: 720px
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px
+  }
+}
+
+@mixin row() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * 3rem);
+  margin-right: calc(-0.5 * 1.5rem);
+  margin-left: calc(-0.5 * 1.5rem);
+  & > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-left: calc(1.5rem * .5);
+    padding-right: calc(1.5rem * .5);
+    margin-top: 0
+  }
+}
+
+@mixin btn() {
+  border-width: 2px;
+  font-weight: 500;
+  padding: 0.8rem 2.6rem;
+  transition: all .5s ease;
+  background-color: #20c997;
+  border-color: #20c997;
+  //@include text($fontFamilyJosefinSans, 1rem,1.2,300);
+  font-family: Poppins, sans-serif;
+  color: #dee3e4 !important;
+
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  --bs-border-radius-pill: 50rem;
+  border-radius: var(--bs-border-radius-pill) !important;
+  &:hover {
+    background-color: #20c997;
+    border-color: #20c997;
+    color: #fff;
+  }
+}
+
+@mixin box-shadow($val...) {
+  -webkit-box-shadow: ($val);
+  box-shadow: ($val);
+}
+
+@mixin transition($val...) {
+  -webkit-transition: ($val);
+  transition: ($val);
 }
