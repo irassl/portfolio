@@ -17,59 +17,59 @@
     margin-right: auto;
     margin-left: auto;
 
-    .title {
-      //@include text(inherit, 12px, 1.5,400);
-      position: relative !important;
-      display: flex !important;
-      text-align: center !important;
-      //text-align: center ;
-      //align-items: center;
-      margin-bottom: 3rem !important;
-
-      .aboutTitle {
-        // @include text($fontFamilyJosefinSans, 36px, 1.5,600);
-        font-size: calc(1.95rem + 8.4vw) !important;
-        font-weight: 600 !important;
-        line-height: 1.3;
-        width: 100% !important;
-        text-transform: uppercase !important;
-        opacity: .1;
-        margin-bottom: 0 !important;
-        margin-top: 0;
-        color: #6c757d !important
-      }
-
-      @media(min-width: 1200px) {
-        .aboutTitle {
-          font-size: 8.25rem !important
-        }
-      }
-
-      .aboutTitleBg {
-        @include text($fontFamilyJosefinSans, 2.25rem, 1.5, 600);
-        //font-size: 2.25rem !important;
-        //   line-height: 1.5 !important;
-        display: block;
-        align-self: center !important;
-        //line-height: 1.5 !important;
-        //font-size: 2.25rem!important;
-        //font-weight: 600 !important;
-        position: absolute !important;
-        width: 100% !important;
-        margin-top: 0;
-        margin-bottom: 0 !important;
-        color: rgba(255, 255, 255, 1) !important;
-      }
-
-      .headingSeparatorLine {
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 80px;
-        //border-bottom: 1px solid #dee2e6 !important;
-        //border-color: #20c997 !important;
-      }
-    }
+    //.title {
+    //  //@include text(inherit, 12px, 1.5,400);
+    //  position: relative !important;
+    //  display: flex !important;
+    //  text-align: center !important;
+    //  //text-align: center ;
+    //  //align-items: center;
+    //  margin-bottom: 3rem !important;
+    //
+    //  .aboutTitle {
+    //    // @include text($fontFamilyJosefinSans, 36px, 1.5,600);
+    //    font-size: calc(1.95rem + 8.4vw) !important;
+    //    font-weight: 600 !important;
+    //    line-height: 1.3;
+    //    width: 100% !important;
+    //    text-transform: uppercase !important;
+    //    opacity: .1;
+    //    margin-bottom: 0 !important;
+    //    margin-top: 0;
+    //    color: #6c757d !important
+    //  }
+    //
+    //  @media(min-width: 1200px) {
+    //    .aboutTitle {
+    //      font-size: 8.25rem !important
+    //    }
+    //  }
+    //
+    //  .aboutTitleBg {
+    //    @include text($fontFamilyJosefinSans, 2.25rem, 1.5, 600);
+    //    //font-size: 2.25rem !important;
+    //    //   line-height: 1.5 !important;
+    //    display: block;
+    //    align-self: center !important;
+    //    //line-height: 1.5 !important;
+    //    //font-size: 2.25rem!important;
+    //    //font-weight: 600 !important;
+    //    position: absolute !important;
+    //    width: 100% !important;
+    //    margin-top: 0;
+    //    margin-bottom: 0 !important;
+    //    color: rgba(255, 255, 255, 1) !important;
+    //  }
+    //
+    //  .headingSeparatorLine {
+    //    display: block !important;
+    //    margin-left: auto !important;
+    //    margin-right: auto !important;
+    //    width: 80px;
+    //    //border-bottom: 1px solid #dee2e6 !important;
+    //    //border-color: #20c997 !important;
+    //  }
+    //}
 
     .content {
       @include row();

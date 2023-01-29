@@ -1,19 +1,21 @@
 import React from 'react';
 import style from './Abount.module.scss'
+import {TitleB} from "../common/componentns/titleB/TitleB";
 
 export const About = () => {
     return (
         <div id={'about'}  className={style.aboutBlock}>
             <div className={style.container}>
-                <div className={style.title}>
-                    <h2 className={style.aboutTitle}>
-                        About Me
-                    </h2>
-                    <p className={style.aboutTitleBg}>
-                        Know Me More
-                        <span className={style.headingSeparatorLine}/>
-                    </p>
-                </div>
+                {/*<div className={style.title}>*/}
+                {/*    <h2 className={style.aboutTitle}>*/}
+                {/*        About Me*/}
+                {/*    </h2>*/}
+                {/*    <p className={style.aboutTitleBg}>*/}
+                {/*        Know Me More*/}
+                {/*        <span className={style.headingSeparatorLine}/>*/}
+                {/*    </p>*/}
+                {/*</div>*/}
+                <TitleB title={' Know Me More'} bgTitle={' About Me'}/>
                 <div className={style.content}>
                     <div className={style.aboutMe}>
                         <h2>

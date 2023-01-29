@@ -8,24 +8,26 @@ import {Contacts} from "./contacts/Contacts";
 import {Footer} from "./footer/Footer";
 import {About} from "./about/About";
 import {Home} from "./home/Home";
+import {Services} from "./service/Services";
 
 
 function App() {
     return (
         <div className="">
             <div className='main-wrapper'>
-                <div  id="content" role="main">
+                <div id="content" role="main">
 
 
-            <Header/>
-            {/*<Main/>*/}
-            <Home/>
-            <About/>
-            <Skills/>
-            <Projects/>
-            <Contacts/>
+                    <Header/>
+                    {/*<Main/>*/}
+                    <Home/>
+                    <About/>
+                    <Services/>
+                    {/*<Skills/>*/}
+                    <Projects/>
+                    <Contacts/>
                 </div>
-            <Footer/>
+                <Footer/>
             </div>
         </div>
     );

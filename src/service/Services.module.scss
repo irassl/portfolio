@@ -1,0 +1,32 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+.bgDark{
+  background-color: #343a40 !important;
+  position: relative;
+  padding: 4.5rem 0;
+  overflow: hidden;
+  @media(max-width: 575.98px) {
+    padding: 3.5rem 0
+  }
+  .container{
+    @include containerNew;
+    .content{
+      @include row();
+      .contentCol{
+        flex: 0 0 auto;
+        width: 91.66666667%;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        .contentBox {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 0;
+          margin-right: calc(-0.5 * 1.5rem);
+          margin-left: calc(-0.5 * 1.5rem);
+        }
+      }
+    }
+  }
+}
+

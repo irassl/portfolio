@@ -4,6 +4,22 @@ import {Link} from "react-scroll";
 
 
 export const Nav = () => {
+    const [stickyHeader, setStickyHeader] = useState(false);
+    const checkScrollTop = () => {
+        let header = document.getElementsByClassName("nav");
+
+        if (header) {
+            if (
+                document.body.scrollTop > 180 ||
+                document.documentElement.scrollTop > 180
+            ) {
+                setStickyHeader(true);
+            } else {
+                setStickyHeader(false);
+            }
+        }
+    };
+
     return (
         <nav className={style.nav}>
             <a href=''>Главное</a>

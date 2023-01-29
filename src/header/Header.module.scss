@@ -1,19 +1,28 @@
 @import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
 
 .header {
-    height: 80px;
+    display: block;
+    box-sizing: border-box;
+    @include transition(all .5s ease);
 
-    width: 100%;
-    //background-color:  $bgColor;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+    //height: 80px;
+
+    //width: 100%;
+    //display: flex;
+    //align-items: center;
+    //justify-content: end;
+
+    //z-index: 900;
+    //position: absolute;
+
     //position: sticky;
-    position: absolute;
-    z-index: 900;
 
-    //overflow: hidden;
-    //position:fixed;
+   //new change
+   // position: -webkit-sticky;
+   // position: sticky;
+   // top: 0;
+   // z-index: 900;
 
 
 }
