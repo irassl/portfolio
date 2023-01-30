@@ -4,10 +4,9 @@ import style from './Service.module.scss'
 import {IconContext} from 'react-icons';
 
 type ServiceType = {
-    children: any,
+    children: React.ReactNode,
     name: string,
     desc: string
-
 }
 
 export const Service = ({children, name, desc}: ServiceType) => {

@@ -1,0 +1,6 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+.section{
+  @include section();
+  background-color: #212529 !important;
+}
