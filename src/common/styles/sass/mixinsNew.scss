@@ -1,0 +1,51 @@
+@import "./variables";
+
+@mixin section() {
+  position: relative;
+  padding: 4.5rem 0;
+  overflow: hidden;
+  @media (max-width: 575.98px) {
+    padding: 3.5rem 0;
+  }
+}
+@mixin container() {
+  width: 100%;
+  padding-right: calc(1.5rem * .5);
+  padding-left: calc(1.5rem * .5);
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 540px
+  }
+  @media (min-width: 768px) {
+    max-width: 720px
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px
+  }
+}
+@mixin row(){
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * 3rem);
+  margin-right: calc(-.5 * 1.5rem);
+  margin-left: calc(-.5 * 1.5rem);
+  &> *{
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 1.5rem * .5;
+    padding-left: 1.5rem * .5;
+    margin-top: 3rem;
+  }
+}

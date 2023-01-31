@@ -1,6 +1,30 @@
 @import "../common/styles/sass/variables";
 @import "../common/styles/sass/mixins";
-.section{
+
+.section {
   @include section();
   background-color: #212529 !important;
+
+  .container {
+    @include containerNew();
+    .content {
+      display: flex;
+      flex-wrap:wrap;
+      margin-top: calc(-1 * 3rem);
+      margin-right: calc(-0.5 * 3rem);
+      margin-left: calc(-0.5 * 3rem);
+    }
+  }
+}
+
+.colEducation{
+  flex: 0 0 auto;
+  width: 50%;
+
+  h2{
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    color: white;
+    font-weight: 600;
+  }
 }

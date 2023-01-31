@@ -9,6 +9,8 @@ import {Footer} from "./footer/Footer";
 import {About} from "./about/About";
 import {Home} from "./home/Home";
 import {Services} from "./service/Services";
+import {Resume} from "./resume/Resume";
+import {Contact} from "./contact/Contact";
 
 
 function App() {
@@ -25,7 +27,9 @@ function App() {
                     <Services/>
                     {/*<Skills/>*/}
                     <Projects/>
-                    <Contacts/>
+                    <Resume/>
+                    {/*<Contacts/>*/}
+                    <Contact/>
                 </div>
                 <Footer/>
             </div>

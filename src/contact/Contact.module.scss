@@ -1,0 +1,78 @@
+@import "../common/styles/sass/mixinsNew";
+
+.selector {
+  @include section();
+  background-color: #212529 !important;
+
+  .container {
+    @include container();
+
+    .content {
+      @include row();
+      color: #dee3e4!important;;
+      font-family: Poppins,sans-serif;
+      .contentDetail {
+        //flex-shrink: 0;
+        //width: 100%;
+        //max-width: 100%;
+        padding-right: 1.5rem * .5;
+        padding-left: 1.5rem * .5;
+        margin-top: 3rem;
+       // order: 1 !important;
+
+        text-align: center !important;
+
+        h2{
+          margin-bottom: 1rem !important;
+          font-size: 1.3125rem !important;
+          text-transform: uppercase !important;
+          font-weight: 500;
+          line-height: 1.2;
+          margin-top: 0;
+        }
+        .contentDetailAddress{
+          font-size: 1rem !important;
+          margin: 0 0  1.5rem !important;
+        }
+        p{
+          font-size: 1rem !important;
+          margin: 0 0 .25rem !important;
+        }
+
+        @media (min-width: 768px) {
+          flex: 0 0 auto;
+          width: 33.33333333%;
+          order: 0 !important;
+          text-align: left !important;
+        }
+        @media (min-width: 1200px) {
+          flex: 0 0 auto;
+          width: 25%;
+        }
+      }
+
+      .contentForm{
+
+        @media (min-width: 768px) {
+          flex: none;
+          width: 66.66666667%;
+          order: 1 !important;
+        }
+        @media (min-width: 1200px)  {
+          flex: 0 0 auto;
+          width: 75%
+        }
+        h2{
+          margin-bottom: 1rem !important;
+          font-size: 1.3125rem !important;
+          text-transform: uppercase !important;
+          font-weight: 500;
+          line-height: 1.2;
+          margin-top: 0;
+        }
+
+
+      }
+    }
+  }
+}
