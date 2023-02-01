@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import style from './Contact.module.scss'
 import {TitleB} from "../common/componentns/titleB/TitleB";
-import { IoIosCall } from "react-icons/io";
-import { BsTelegram } from "react-icons/bs";
-import { FaEnvelope } from "react-icons/fa";
+import {IoIosCall} from "react-icons/io";
+import {BsTelegram} from "react-icons/bs";
+import {FaEnvelope} from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+
 export const Contact = () => {
+    const ref = useRef<HTMLFormElement>(null);
+    const [sendingMail, setSendingMail] = useState(false);
+
+    const sendEmail =(e:any)=>{
+        e.preventDefault();
+        setSendingMail(true);
+
+    }
+    // @ts-ignore
     return (
         <section id={'contact'} className={style.selector}>
             <div className={style.container}>
@@ -21,47 +32,81 @@ export const Contact = () => {
                             <br/>
                             San Diego CA 2028
                         </p>
-                        <p className={"text-3 mb-1 "}>
-              <span className="text-primary text-4 me-2">
-                {/*<i className="fas fa-phone"/>*/}
-                  <IoIosCall/>
-              {/*    BsTelephone*/}
-              </span>
+                        <p className={style.contentDetailText}>
+
+                            <IoIosCall className={style.contentDetailIcon}/>
+
                             (060) 444 434 444
                         </p>
-                        <p className={"text-3 mb-1 "}>
-              <span className="text-primary text-4 me-2">
-                {/*  BsTelegram*/}
-                {/*<i className="fas fa-fax"/>*/}
-                  <BsTelegram/>
-              </span>
+                        <p className={style.contentDetailText}>
+                            <BsTelegram className={style.contentDetailIcon}/>
+
                             (060) 555 545 555
                         </p>
                         <p className={style.contentDetailAddress}>
-              <span className="text-primary text-4 me-2">
-                <i className="fas fa-envelope"/>
-              {/*    FaEnvelope*/}
-                  <FaEnvelope/>
-              </span>
-                            chat@simone.com
+
+                            <FaEnvelope className={style.contentDetailIcon}/>
+
+                            rassl.ried@icloud.com
                         </p>
-                        <h2
-                            className={
-                                "mb-3 text-5 text-uppercase "
-                            }
-                        >
+                        <h2>
                             Follow Me
                         </h2>
-
                     </div>
                     <div className={style.contentForm}>
-                        <h2
-                            className={
-                                "mb-3 text-5 text-uppercase text-center text-md-start "
-                            }
-                        >
+                        <h2>
                             Send us a note
                         </h2>
+                        <form className={style.form} id="contact-form" ref={ref} onSubmit={sendEmail}>
+                            <div className={style.formRow}>
+                                <div className={style.formColm}>
+                                    <input
+                                        name="user_name"
+                                        type="text"
+                                        className={style.formControl}
+                                        required
+                                        placeholder="Name"
+                                    />
+                                </div>
+                                <div className={style.formColm}>
+                                    <input
+                                        name="user_email"
+                                        type="email"
+                                        className={style.formControl}
+                                        required
+                                        placeholder="Email"
+                                    />
+                                </div>
+                                <div className={style.formTextArea}>
+                                     <textarea
+                                         name="message"
+                                         className={style.formControl}
+                                         rows={5}
+                                         required
+                                         placeholder="Tell us more about your needs........"
+                                         defaultValue={""}
+                                     />
+                                </div>
+                                <p className={style.fromButtonText}>
+                                    <button
+                                        id="submit-btn"
+                                        // className="btn btn-primary rounded-pill d-inline-flex"
+                                        className={style.formButton}
+                                         type="submit"
+                                    >
+                                        {sendingMail ? (
+                                            <>
+                                                <span
+                                                    role="status" aria-hidden="true"// class="spinner-border spinner-border-sm align-self-center me-2"
+                                               ></span>
+                                                Sending.....
+                                            </>) : (<>Send Message</>)}
+                                    </button>
+                                </p>
+
+                            </div>
+
+                        </form>
 
 
                     </div>

@@ -49,3 +49,23 @@
     margin-top: 3rem;
   }
 }
+@mixin btn(){
+  font-family: Poppins,sans-serif;
+  color: white;
+  padding: .8rem 2.6rem;
+  font-weight: 500;
+  border-width: 2px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  box-sizing: border-box;
+
+  background-color: #20c997;
+  border-color: #20c997;
+  border-radius: 50rem !important;
+  display: inline-flex !important;
+  cursor: pointer;
+  &:hover , &:focus, &:not(:disabled):not(.disabled).active{
+    background-color: #20c997;
+    border-color: #20c997;
+  }
+}

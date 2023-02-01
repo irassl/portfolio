@@ -3,7 +3,7 @@
 
 .section {
   @include section();
-  background-color: #212529 !important;
+  background-color: #343a40 !important;
 
   .container {
     @include containerNew();
