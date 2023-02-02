@@ -8,14 +8,17 @@ import {Home} from "./home/Home";
 import {Services} from "./service/Services";
 import {Resume} from "./resume/Resume";
 import {Contact} from "./contact/Contact";
+import {FooterNew} from "./footer/FooterNew";
+import {ClassicHeader} from "./classicHeader/ClassicHeader";
 
 
 function App() {
     return (
-        <div className="">
+        <>
             <div className='main-wrapper'>
                 <div id="content" role="main">
-                    <Header/>
+                    {/*<Header/>*/}
+                    <ClassicHeader/>
                     {/*<Main/>*/}
                     <Home/>
                     <About/>
@@ -25,9 +28,10 @@ function App() {
                     <Resume/>
                     <Contact/>
                 </div>
-                <Footer/>
+                {/*<Footer/>*/}
+                <FooterNew/>
             </div>
-        </div>
+        </>
     );
 }
 

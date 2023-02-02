@@ -10,7 +10,7 @@ export const Contact = () => {
     const ref = useRef<HTMLFormElement>(null);
     const [sendingMail, setSendingMail] = useState(false);
 
-    const sendEmail =(e:any)=>{
+    const sendEmail = (e: any) => {
         e.preventDefault();
         setSendingMail(true);
 
@@ -33,20 +33,21 @@ export const Contact = () => {
                             San Diego CA 2028
                         </p>
                         <p className={style.contentDetailText}>
-
-                            <IoIosCall className={style.contentDetailIcon}/>
-
+                            <span  className={style.contentDetailIcon}>
+                                <IoIosCall  />
+                            </span>
                             (060) 444 434 444
                         </p>
                         <p className={style.contentDetailText}>
-                            <BsTelegram className={style.contentDetailIcon}/>
-
+                            <span className={style.contentDetailIcon}>
+                                  <BsTelegram />
+                            </span>
                             (060) 555 545 555
                         </p>
                         <p className={style.contentDetailAddress}>
-
-                            <FaEnvelope className={style.contentDetailIcon}/>
-
+                            <span className={style.contentDetailIcon}>
+                                <FaEnvelope />
+                            </span>
                             rassl.ried@icloud.com
                         </p>
                         <h2>
@@ -92,13 +93,14 @@ export const Contact = () => {
                                         id="submit-btn"
                                         // className="btn btn-primary rounded-pill d-inline-flex"
                                         className={style.formButton}
-                                         type="submit"
+                                        type="submit"
                                     >
                                         {sendingMail ? (
                                             <>
                                                 <span
-                                                    role="status" aria-hidden="true"// class="spinner-border spinner-border-sm align-self-center me-2"
-                                               ></span>
+                                                    role="status"
+                                                    aria-hidden="true"// class="spinner-border spinner-border-sm align-self-center me-2"
+                                                ></span>
                                                 Sending.....
                                             </>) : (<>Send Message</>)}
                                     </button>

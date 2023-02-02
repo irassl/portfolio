@@ -69,3 +69,11 @@
     border-color: #20c997;
   }
 }
+@mixin translateY($val...) {
+  --webkit-transform: translateY($val);
+  transform: translateY($val);
+}
+@mixin transition($val...) {
+  --webkit-transition: ($val);
+  transition: ($val);
+}
