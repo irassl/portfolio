@@ -77,3 +77,8 @@
   --webkit-transition: ($val);
   transition: ($val);
 }
+
+@mixin rotate($val){
+  -webkit-transform: rotate($val);
+  transform: rotate($val);
+}
