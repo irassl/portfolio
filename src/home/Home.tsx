@@ -37,8 +37,7 @@ export const Home = () => {
                                     based in Los Angeles, California.
                                 </p>
                                 <Link
-                                    // to="contacts"
-                                    to=""
+                                     to="contacts"
                                     smooth={true}
                                     spy={true}
                                     duration={500}

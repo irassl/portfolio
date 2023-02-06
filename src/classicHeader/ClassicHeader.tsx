@@ -2,11 +2,13 @@ import React, {MouseEventHandler, useEffect, useState} from 'react';
 import style from './ClassicHeader.module.scss'
 import {Link} from "react-scroll";
 import logo from '../assets/image/logo5.png'
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 
 
 export const ClassicHeader = () => {
     const [stickyHeader, setStickyHeader] = useState<boolean>(false);
-    const [isNavModalClose, setIsNavModalClose] = useState<boolean>(true);
+    const [isNavModalClose, setIsNavModalClose] = useState<boolean>(false);
 
     console.log(isNavModalClose)
     useEffect(() => {
@@ -43,9 +45,9 @@ export const ClassicHeader = () => {
                             className={style.logo}
                             to="home"
                             title="Rasul"
-                            onClick={() => {
-                                setIsNavModalClose(true);
-                            }}
+                            // onClick={() => {
+                            //    // setIsNavModalClose(true);
+                            // }}
                         >
                             {"  "}
                             <img src={logo} alt="Rasul"/>{" "}
@@ -167,6 +169,41 @@ export const ClassicHeader = () => {
 
                         </div>
 
+
+                    </div>
+                    <div className={style.iconEnd}>
+                        <ul>
+                            <li>
+                                <a
+                                    href="http://www.twitter.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {/*<i className="fab fa-twitter"/>*/}
+                                    <FontAwesomeIcon icon={faTwitter} />
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="http://www.twitter.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {/*<i className="fab fa-twitter"/>*/}
+                                    <FontAwesomeIcon icon={faTwitter}/>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="http://www.twitter.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {/*<i className="fab fa-twitter"/>*/}
+                                    <FontAwesomeIcon icon={faTwitter}/>
+                                </a>
+                            </li>
+                        </ul>
 
                     </div>
                 </div>

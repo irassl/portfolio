@@ -10,6 +10,7 @@ import {Resume} from "./resume/Resume";
 import {Contact} from "./contact/Contact";
 import {FooterNew} from "./footer/FooterNew";
 import {ClassicHeader} from "./classicHeader/ClassicHeader";
+import {Portfolio} from "./porfolio/Portfolio";
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
                     <About/>
                     <Services/>
                     {/*<Skills/>*/}
-                    <Projects/>
+                    {/*<Projects/>*/}
+                    <Portfolio/>
                     <Resume/>
                     <Contact/>
                 </div>
