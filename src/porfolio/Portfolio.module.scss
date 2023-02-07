@@ -1,51 +1,84 @@
 @import "../common/styles/sass/mixinsNew";
 @import "../common/styles/sass/variables";
 
-.section{
+.section {
   @include section();
   background-color: #212529 !important;
-  .container{
+
+  .container {
     @include container();
-    .contentNone{
+    flex-flow: column wrap; /* Shorthand – you could use ‘flex-direction: column’ and ‘flex-wrap: wrap’ instead */
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .portfolio {
       box-sizing: border-box;
-      display: block;
-      .content{
+
+      .portfolioFilter {
         box-sizing: border-box;
         position: relative;
         text-align: start;
-        height: 950px;
-        @include row();
+        //counter-reset: items;
 
-        .project{
-          display: block;
-         // position: absolute;
+
+        @include row();
+        &::before,
+        &::after {
+          content: "";
+          flex-basis: 100%;
+          width: 0;
+          order: 2;
+        }
+
+
+        //display: grid;
+        //grid-template-columns: repeat(3, 1fr);
+        //grid-area: 1/2/4/3;
+
+        .project {
+         // flex-grow: 1;
+          // display: block;
+          position: relative;
+          box-sizing: border-box;
           left: 0;
           top: 0;
-          @media (min-width: 576px)  {
+          //
+          @media (min-width: 576px) {
             flex: 0 0 auto;
             width: 50%
           }
-          @media (min-width: 992px)  {
-            flex: 0 0 auto;
+          @media (min-width: 992px) {
+           // flex: 0 0 auto;
             width: 33.33333333%
           }
-          .projectBox{
+
+
+          .projectBox {
+
+            box-sizing: border-box;
             position: relative;
             border-radius: 0.375rem !important;
+
             &:hover .projectBoxOverlay {
               opacity: 1;
             }
-            .projectBoxImg{
+
+            .projectBoxImg {
+              box-sizing: border-box;
               position: relative;
               overflow: hidden;
+              height: 250px;
               border-radius: 0.375rem !important;
-              .boxImg{
+
+              .boxImg {
+              //  box-sizing: border-box;
                 max-width: 100%;
-                height: auto;
+                //height: 31%;
                 display: block !important;
               }
             }
-            .projectBoxOverlay{
+
+            .projectBoxOverlay {
               box-sizing: border-box;
               text-align: center;
               display: -ms-flexbox !important;
@@ -58,12 +91,27 @@
               background: rgba(0, 0, 0, 0.7);
               opacity: 0;
               @include transition(all 0.3s ease-in-out);
+
+              .stretchedLink {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                content: ""
+              }
+
               .projectBoxOverlayDetails {
                 margin-bottom: auto;
                 margin-top: auto;
                 width: 100%;
                 padding: 1.5rem 0;
                 text-align: center;
+
+                h5 {
+                  color: white;
+                }
               }
             }
           }

@@ -8,6 +8,7 @@ import project7Img from '../assets/images/projects/project-7.jpg'
 
 export const projectsData = [
     {
+        id: '1',
         title: "Project Title 1",
         projectInfo:
             "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -33,6 +34,7 @@ export const projectsData = [
         ],
     },
     {
+        id: '2',
         title: "Project Title 2",
         projectInfo:
             "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -58,6 +60,7 @@ export const projectsData = [
         ],
     },
     {
+        id: '3',
         title: "Project Title 3",
         projectInfo:
             "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -83,6 +86,7 @@ export const projectsData = [
         ],
     },
     {
+        id: '4',
         title: "Project Title 4",
         projectInfo:
             "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -101,13 +105,14 @@ export const projectsData = [
             instagram: "http://www.instagram.com/",
             mail: "mailto:example@gmail.com",
         },
-        thumbImage:project4Img,
+        thumbImage: project4Img,
         sliderImages: [
             "images/projects/project-1.jpg",
             "images/projects/project-4.jpg",
         ],
     },
     {
+        id: '5',
         title: "Project Title 5",
         projectInfo:
             "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -133,6 +138,7 @@ export const projectsData = [
         ],
     },
     {
+        id: '6',
         title: "Project Title 6",
         projectInfo:
             "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -158,6 +164,7 @@ export const projectsData = [
         ],
     },
     {
+        id: '7',
         title: "Project Title 7",
         projectInfo:
             "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
