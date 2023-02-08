@@ -3,6 +3,7 @@ import style from './Contact.module.scss'
 import {TitleB} from "../common/componentns/titleB/TitleB";
 import emailjs from "@emailjs/browser";
 
+
 export const Contact = () => {
     const form = useRef<HTMLFormElement| any>(null);
     const [sendingMail, setSendingMail] = useState(false);
@@ -51,7 +52,8 @@ export const Contact = () => {
                         <p className={style.contentDetailText}>
                             <span  className={style.contentDetailIcon}>
                                 {/*<IoIosCall  />*/}
-                                <i className="fas fa-phone"></i>
+                                {/*<i className="fas fa-phone"></i>*/}
+                                {/*<FontAwesomeIcon icon="coffee" size="xs" />*/}
                             </span>
                             +7 987 245-90-06
                         </p>

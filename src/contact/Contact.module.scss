@@ -1,6 +1,6 @@
 @import "../common/styles/sass/mixinsNew";
 
-@import "font-awesome";
+
 .selector {
   @include section();
   background-color: #212529 ;
@@ -46,6 +46,7 @@
           color: #dee3e4 ;
         }
         .contentDetailText{
+
           box-sizing: border-box;
           font-size: 1rem !important;
         //  margin: 0 0 .25rem !important;
