@@ -1,21 +1,37 @@
 import React, {useRef, useState} from 'react';
 import style from './Contact.module.scss'
 import {TitleB} from "../common/componentns/titleB/TitleB";
-import {IoIosCall} from "react-icons/io";
-import {BsTelegram} from "react-icons/bs";
-import {FaEnvelope} from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
-    const ref = useRef<HTMLFormElement>(null);
+    const form = useRef<HTMLFormElement| any>(null);
     const [sendingMail, setSendingMail] = useState(false);
 
-    const sendEmail = (e: any) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setSendingMail(true);
+        emailjs
+            .sendForm(
+                "service_k59m02c",
+                "template_v0j7rim",
+                form.current,
+                "1_WTNQ0sy4I2nsbWN"
+            )  .then(
+            (result) => {
+
+                //e.target.reset();
+                // @ts-ignore
+                document.getElementById("contact-form").reset();
+
+                console.log(result.text);
+                setSendingMail(false);
+            },
+            (error) => {
+                setSendingMail(false);
+            }
+        )
 
     }
-    // @ts-ignore
     return (
         <section id={'contact'} className={style.selector}>
             <div className={style.container}>
@@ -26,27 +42,31 @@ export const Contact = () => {
                             Address
                         </h2>
                         <p className={style.contentDetailAddress}>
-                            4th Floor, Plot No.22,
+                            city Ufa,
                             <br/>
-                            145 Murphy Canyon Rd.
+                            republic of Bashkortostan,
                             <br/>
-                            San Diego CA 2028
+                            Russia
                         </p>
                         <p className={style.contentDetailText}>
                             <span  className={style.contentDetailIcon}>
-                                <IoIosCall  />
+                                {/*<IoIosCall  />*/}
+                                <i className="fas fa-phone"></i>
                             </span>
-                            (060) 444 434 444
+                            +7 987 245-90-06
                         </p>
                         <p className={style.contentDetailText}>
                             <span className={style.contentDetailIcon}>
-                                  <BsTelegram />
+                                <i className="fa-brands fa-telegram"></i>
+                                {/*<FontAwesomeIcon icon={faTelegram} />*/}
+                                {/*  <BsTelegram />*/}
                             </span>
-                            (060) 555 545 555
+                            @mistline
                         </p>
                         <p className={style.contentDetailAddress}>
                             <span className={style.contentDetailIcon}>
-                                <FaEnvelope />
+                                {/*<FaEnvelope />*/}
+                                <i className="fa-solid fa-envelope"></i>
                             </span>
                             rassl.ried@icloud.com
                         </p>
@@ -58,7 +78,7 @@ export const Contact = () => {
                         <h2>
                             Send us a note
                         </h2>
-                        <form className={style.form} id="contact-form" ref={ref} onSubmit={sendEmail}>
+                        <form className={style.form} id="contact-form" ref={form} onSubmit={sendEmail}>
                             <div className={style.formRow}>
                                 <div className={style.formColm}>
                                     <input
@@ -88,34 +108,29 @@ export const Contact = () => {
                                          defaultValue={""}
                                      />
                                 </div>
-                                <p className={style.fromButtonText}>
-                                    <button
-                                        id="submit-btn"
-                                        // className="btn btn-primary rounded-pill d-inline-flex"
-                                        className={style.formButton}
-                                        type="submit"
-                                    >
-                                        {sendingMail ? (
-                                            <>
+
+                            </div>
+                            <p className={style.fromButtonText}>
+                                <button
+                                    id="submit-btn"
+                                    // className="btn btn-primary rounded-pill d-inline-flex"
+                                    className={style.formButton}
+                                    type="submit"
+                                >
+                                    {sendingMail ? (
+                                        <>
                                                 <span
                                                     role="status"
                                                     aria-hidden="true"// class="spinner-border spinner-border-sm align-self-center me-2"
                                                 ></span>
-                                                Sending.....
-                                            </>) : (<>Send Message</>)}
-                                    </button>
-                                </p>
-
-                            </div>
-
+                                            Sending.....
+                                        </>) : (<>Send Message</>)}
+                                </button>
+                            </p>
                         </form>
-
-
                     </div>
-
                 </div>
             </div>
-
         </section>
     );
 };

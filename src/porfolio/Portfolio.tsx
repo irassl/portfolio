@@ -8,7 +8,7 @@ import {projectsData} from "./ProjectsData";
 import {ProjectDetail} from "../projects/ProjectDetail";
 
 export const Portfolio = () => {
-    const [selectedId, setSelectedId] = useState<string | null>('')
+    const [selectedId, setSelectedId] = useState<string >('')
     const [selectedProjectDetails, setSelectedProjectDetails] = useState<any>();
     const handleOpenPopup = (id: string) => {
         const project = projectsData.find((item)=>item.id === id)
