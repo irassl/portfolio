@@ -2,7 +2,8 @@ import React from 'react';
 import style from './Services.module.scss'
 import {TitleB} from "../common/componentns/titleB/TitleB";
 import {Service} from "./Service/Service";
-import {FaPalette} from 'react-icons/fa';
+
+import {services} from "./ServicesData";
 
 export const Services = () => {
     return (
@@ -12,22 +13,9 @@ export const Services = () => {
                 <div className={style.content}>
                     <div className={style.contentCol}>
                         <div className={style.contentBox}>
-                        <Service name={'Graphic Design'}
-                                 desc={"Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."}>
-                            <FaPalette/>
-                        </Service>
-                        <Service name={'Graphic Design'}
-                                 desc={"Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."}>
-                            <FaPalette/>
-                        </Service>
-                        <Service name={'Graphic Design'} desc={"Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."}>
-                            <FaPalette/>
-                        </Service>
-                        <Service name={'Graphic Design'} desc={"Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."}>
-                            <FaPalette/>
-                        </Service>
-
-
+                            {services.length > 0 && services.map((service,index)=>(
+                                <Service key={index} icon={service.icon} name={service.name} desc={service.desc}/>
+                            ))}
 
                     </div>
                     </div>

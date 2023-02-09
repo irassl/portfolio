@@ -4,6 +4,8 @@ import {TitleB} from "../common/componentns/titleB/TitleB";
 import emailjs from "@emailjs/browser";
 
 
+
+
 export const Contact = () => {
     const form = useRef<HTMLFormElement| any>(null);
     const [sendingMail, setSendingMail] = useState(false);
@@ -17,7 +19,7 @@ export const Contact = () => {
                 "template_v0j7rim",
                 form.current,
                 "1_WTNQ0sy4I2nsbWN"
-            )  .then(
+            ).then(
             (result) => {
 
                 //e.target.reset();
@@ -52,7 +54,7 @@ export const Contact = () => {
                         <p className={style.contentDetailText}>
                             <span  className={style.contentDetailIcon}>
                                 {/*<IoIosCall  />*/}
-                                {/*<i className="fas fa-phone"></i>*/}
+                                <i className="fas fa-phone"></i>
                                 {/*<FontAwesomeIcon icon="coffee" size="xs" />*/}
                             </span>
                             +7 987 245-90-06
@@ -60,7 +62,7 @@ export const Contact = () => {
                         <p className={style.contentDetailText}>
                             <span className={style.contentDetailIcon}>
                                 <i className="fa-brands fa-telegram"></i>
-                                {/*<FontAwesomeIcon icon={faTelegram} />*/}
+
                                 {/*  <BsTelegram />*/}
                             </span>
                             @mistline

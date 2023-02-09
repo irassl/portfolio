@@ -1,8 +1,60 @@
 
+.content {
+  border-radius: 0.375rem !important;
+
+  margin-bottom: 1.5rem !important;
+  padding: 1.5rem !important;
+  // color: #fff !important;
+  background-color: #111418 !important;
+  font-family: Poppins, sans-serif;
+  //p{
+  //  margin-bottom: 1rem;
+  //  margin-top: 0;
+  //}
+
+  .badge {
+    --bs-badge-padding-x: 0.65em;
+    --bs-badge-padding-y: 0.35em;
+    --bs-badge-font-size: 0.75em;
+    --bs-badge-font-weight: 700;
+    --bs-badge-color: #fff;
+    --bs-badge-border-radius: 0.375rem;
+    display: inline-block;
+    padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+    font-size: 1em;
+    // font-weight: var(--bs-badge-font-weight);
+    line-height: 1;
+    color: var(--bs-badge-color);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.375rem;
+    background-color: #20c997 !important;
+    font-weight: 400 !important;
+    font-family: Poppins, sans-serif;
+
+  }
+
+  h3 {
+
+    color: white;
+  }
+
+  .place {
+    color: #20c997 !important;
+  }
+
+  .desc {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, .5) !important;
+  }
+}
+
+
 .colEducation {
   @media (min-width: 768px) {
-    flex: 0 0 auto ;
-    width: 50% ;
+    flex: 0 0 auto;
+    width: 50%;
   }
   box-sizing: border-box;
   flex-shrink: 0;
@@ -17,57 +69,6 @@
     margin-bottom: 1.5rem !important;
     color: white;
     font-weight: 600;
-  }
-
-  .content {
-    border-radius: 0.375rem !important;
-
-    margin-bottom: 1.5rem !important;
-    padding: 1.5rem!important;
-    // color: #fff !important;
-    background-color: #111418 !important;
-    font-family: Poppins, sans-serif;
-    //p{
-    //  margin-bottom: 1rem;
-    //  margin-top: 0;
-    //}
-
-    .badge {
-      --bs-badge-padding-x: 0.65em;
-      --bs-badge-padding-y: 0.35em;
-      --bs-badge-font-size: 0.75em;
-      --bs-badge-font-weight: 700;
-      --bs-badge-color: #fff;
-      --bs-badge-border-radius: 0.375rem;
-      display: inline-block;
-      padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
-      font-size: 1em;
-      // font-weight: var(--bs-badge-font-weight);
-      line-height: 1;
-      color: var(--bs-badge-color);
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: baseline;
-      border-radius: 0.375rem;
-      background-color:  #20c997 !important;
-      font-weight: 400 !important;
-      font-family: Poppins, sans-serif;
-
-    }
-
-    h3 {
-
-      color: white;
-    }
-
-    .place {
-      color: #20c997 !important;
-    }
-
-    .desc {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, .5) !important;
-    }
   }
 
 }

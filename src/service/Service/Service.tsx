@@ -1,25 +1,25 @@
 import React from 'react';
 import style from './Service.module.scss'
 
-import {IconContext} from 'react-icons';
 
 type ServiceType = {
-    children: React.ReactNode,
+    icon: string,
     name: string,
-    desc: string
+    desc: string,
+
 }
 
-export const Service = ({children, name, desc}: ServiceType) => {
+export const Service = ({name, desc,icon}: ServiceType) => {
 
     return (
 
-        <div className={style.contentService}>
+        <div className={style.contentService} >
             <div className={style.boxService}>
                 <div className={style.featureBox}>
-                    {/*<i className={'fas fa-palette'}/>*/}
-                    <IconContext.Provider value={{size: '36'}}>
-                        {children}
-                    </IconContext.Provider>
+                    <i className={icon}/>
+                    {/*<IconContext.Provider value={{size: '36'}}>*/}
+                    {/*    {children}*/}
+                    {/*</IconContext.Provider>*/}
 
                 </div>
                 <h3>

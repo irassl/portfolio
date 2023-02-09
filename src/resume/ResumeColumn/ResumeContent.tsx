@@ -1,62 +1,31 @@
 import React from 'react';
 import style from './ResumeContent.module.scss'
 type ResumeContentType={
-    title: string
+    yearRange: string,
+    title: string,
+    place: string,
+    desc: string,
+
 }
-export const ResumeContent = (props:ResumeContentType) => {
+export const ResumeContent = ({yearRange,title,place,desc}:ResumeContentType) => {
     return (
-        <div className={style.colEducation}>
-            <h2>
-                {props.title}
-            </h2>
-        <div className={style.content}>
+
+        <div className={style.content}  >
             <p className={style.badge}>
-                2000 - 2004
+                {yearRange}
             </p>
             <h3>
-                Computer Science
+                {title}
             </h3>
             <p className={style.place}>
-                International University
+                {place}
             </p>
             <p className={style.desc}>
-                Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.
+                {desc}
 
             </p>
 
         </div>
-            <div className={style.content}>
-                <p className={style.badge}>
-                    2000 - 2004
-                </p>
-                <h3>
-                    Computer Science
-                </h3>
-                <p className={style.place}>
-                    International University
-                </p>
-                <p className={style.desc}>
-                    Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.
 
-                </p>
-
-            </div>
-            <div className={style.content}>
-                <p className={style.badge}>
-                    2000 - 2004
-                </p>
-                <h3>
-                    Computer Science
-                </h3>
-                <p className={style.place}>
-                    International University
-                </p>
-                <p className={style.desc}>
-                    Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.
-
-                </p>
-
-            </div>
-        </div>
     );
 };
