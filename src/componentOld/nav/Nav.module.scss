@@ -1,0 +1,63 @@
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixins";
+
+.nav {
+  //background-color: $bgSecondColor;
+  //width: 400px;
+  //display: flex;
+  //justify-content: space-between;
+  //align-items: center;
+  //padding-right: 100px;
+  //position: absolute;
+  //z-index: 1002;
+  //left: auto;
+  //top: 20px;
+
+  //position: sticky !important;
+
+  //new
+  //display: -webkit-box !important;
+  //display: -ms-flexbox !important;
+  //display: flex !important;
+  //height: auto !important;
+  //-webkit-box-ordinal-group: 0;
+  //-ms-flex-item-align: stretch;
+  //align-self: stretch;
+  //position: fixed;
+  //z-index: 999;
+  //top: 0;
+  //left: 0;
+  //width: 100%;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  height: 70px;
+  justify-content: flex-start;
+  left: 0;
+  position: absolute;
+  top:0;
+  width: 100%;
+  z-index: 999;
+  
+
+
+  a {
+    @include text($fontFamilyPoppins, 16px, 1.2, 200);
+    color: $textColor;
+    cursor: pointer;
+
+    &:focus {
+      color: #20c997;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+  }
+
+  a:hover {
+    color: #20c997;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}

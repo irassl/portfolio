@@ -1,0 +1,28 @@
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixins";
+
+.header {
+    display: block;
+    box-sizing: border-box;
+    @include transition(all .5s ease);
+
+    //height: 80px;
+
+    //width: 100%;
+    //display: flex;
+    //align-items: center;
+    //justify-content: end;
+
+    //z-index: 900;
+    //position: absolute;
+
+    //position: sticky;
+
+   //new change
+   // position: -webkit-sticky;
+   // position: sticky;
+   // top: 0;
+   // z-index: 900;
+
+
+}

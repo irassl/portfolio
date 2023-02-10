@@ -1,0 +1,73 @@
+@import "../../../common/styles/sass/variables";
+@import "../../../common/styles/sass/mixins";
+
+//.content{
+//  @include row();
+//  .contentCol{
+//    flex: 0 0 auto;
+//    width: 91.66666667%;
+//    margin-right: auto !important;
+//    margin-left: auto !important;
+//    .contentBox{
+//      @include row();
+//      margin-top: 3rem !important;
+.contentService {
+  //flex-shrink: 0;
+  width: 100%;
+
+  .boxService {
+    margin-bottom: 3rem !important;
+    box-sizing: border-box;
+    position: relative;
+
+    h3 {
+      font-size: 1.25rem;
+      //font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      padding-left: 90px;
+      padding-top: 0;
+      color: white;
+    }
+
+    p {
+      margin-bottom: 0 !important;
+      color: rgba(255, 255, 255, .5) !important;
+      padding-left: 90px;
+      padding-top: 0;
+    }
+
+    .featureBox {
+      //box-sizing: border-box;
+      // position: relative;
+      font-weight: 900;
+      width: 70px;
+      height: 70px;
+      //-ms-flex-negative: 0;
+      flex-shrink: 0;
+      //display: -webkit-box;
+      //display: -ms-flexbox;
+      display: flex;
+      //-webkit-box-align: center;
+      //-ms-flex-align: center;
+      align-items: center;
+      font-size: 30px;
+      justify-content: center !important;
+      left: 0;
+      margin-bottom: 0;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      color: #20c997 !important;
+      box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+      border-radius: 0.375rem !important;
+      background-color: #212529 !important;
+    }
+  }
+  @media (min-width: 768px) {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+}
+

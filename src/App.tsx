@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.scss';
-import {Header} from "./header/Header";
-import {Projects} from "./projects/Projects";
-import {Footer} from "./footer/Footer";
-import {About} from "./about/About";
-import {Home} from "./home/Home";
-import {Services} from "./service/Services";
-import {Resume} from "./resume/Resume";
-import {Contact} from "./contact/Contact";
-import {FooterNew} from "./footer/FooterNew";
-import {ClassicHeader} from "./classicHeader/ClassicHeader";
-import {Portfolio} from "./porfolio/Portfolio";
+import {Header} from "./componentOld/header/Header";
+import {Projects} from "./componentOld/projects/Projects";
+import {Footer} from "./components/footer/Footer";
+import {About} from "./components/about/About";
+import {Home} from "./components/home/Home";
+import {Services} from "./components/service/Services";
+import {Resume} from "./components/resume/Resume";
+import {Contact} from "./components/contact/Contact";
+import {FooterNew} from "./components/footer/FooterNew";
+import {ClassicHeader} from "./components/classicHeader/ClassicHeader";
+import {Portfolio} from "./components/porfolio/Portfolio";
 
 
 function App() {
