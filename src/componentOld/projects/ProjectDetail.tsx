@@ -9,7 +9,7 @@ type ProjectPopupPropsType = {
     project: any
 
 }
-export const ProjectDetail = ({closePopup, selectedId, children, project}: ProjectPopupPropsType) => {
+export const ProjectDetail = ({closePopup, selectedId,  project}: ProjectPopupPropsType) => {
     console.log(project)
     return (
         <motion.div className={style.modal} tabIndex={-1}>

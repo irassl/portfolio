@@ -1,32 +1,22 @@
 export const services = [
     {
-        name: "Graphic Design",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        icon: "fas fa-palette",
+        name: "React, Redux",
+        desc: "Used React library for developing UI of SPA. Experienced in creating functional components with Hooks as well as class components.",
+        icon: "fa-brands fa-react",
     },
     {
-        name: "Web Design",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        icon: "fas fa-desktop",
+        name: "JavaScript, TypeScrip",
+        desc: "Experienced in using ES6 features, such as Promises, Classes, Destructuring assignment, Arrow functions etc.",
+        icon: "fa-brands fa-js",
     },
     {
-        name: "UI/UX Design",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        icon: "fas fa-pencil-ruler",
+        name: "HTML,CCS",
+        desc: "Created styles for UI components by using Styled Components and Sass preprocessor.",
+        icon: "fa-brands fa-html5",
     },
     {
-        name: "App Design & Develop",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+        name: "Material UI",
+        desc: "Used Material UI for app development with styles and design out of a box.",
         icon: "fas fa-paint-brush",
-    },
-    {
-        name: "Business Analysis",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        icon: "fas fa-chart-area",
-    },
-    {
-        name: "SEO Marketing",
-        desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-        icon: "fas fa-bullhorn",
     },
 ];

@@ -7,19 +7,19 @@ export const SocialIcons = () => {
             <li>
                 <a
                     href="https://t.me/mistline"
-                    target="_blank"
+                   rel="noopener"
                 >
                     <i className="fa-brands fa-telegram" />
                 </a>
             </li>
             <li>
-                <a href="https://github.com/irassl" target="_blank">
+                <a href="https://github.com/irassl" rel="noopener" >
                     <i className="fab fa-github" />
                 </a>
 
             </li>
             <li>
-                <a href="https://linkedin.com" target="_blank">
+                <a href="https://linkedin.com" rel="noopener">
                     <i className="fa-brands fa-linkedin"></i>
                 </a>
 

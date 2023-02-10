@@ -1,8 +1,5 @@
 import React from 'react';
 import './App.scss';
-import {Header} from "./componentOld/header/Header";
-import {Projects} from "./componentOld/projects/Projects";
-import {Footer} from "./components/footer/Footer";
 import {About} from "./components/about/About";
 import {Home} from "./components/home/Home";
 import {Services} from "./components/service/Services";
@@ -18,19 +15,15 @@ function App() {
         <>
             <div className='main-wrapper'>
                 <div id="content" role="main">
-                    {/*<Header/>*/}
+
                     <ClassicHeader/>
-                    {/*<Main/>*/}
                     <Home/>
                     <About/>
                     <Services/>
-                    {/*<Skills/>*/}
-                    {/*<Projects/>*/}
                     <Portfolio/>
                     <Resume/>
                     <Contact/>
                 </div>
-                {/*<Footer/>*/}
                 <FooterNew/>
             </div>
         </>

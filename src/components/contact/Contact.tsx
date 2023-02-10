@@ -50,7 +50,9 @@ export const Contact = () => {
                             <br/>
                             republic of Bashkortostan,
                             <br/>
-                            Russia
+                            Russia.
+                            <br/>
+                            Ready for relocation
                         </p>
                         <p className={style.contentDetailText}>
                             <span  className={style.contentDetailIcon}>

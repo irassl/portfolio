@@ -1,9 +1,7 @@
-import React, {MouseEventHandler, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import style from './ClassicHeader.module.scss'
 import {Link} from "react-scroll";
 import logo from '../../assets/image/logo5.png'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {SocialIcons} from "../../common/componentns/socialIcons/SocialIcons";
 
 
@@ -12,7 +10,6 @@ export const ClassicHeader = () => {
     const [stickyHeader, setStickyHeader] = useState<boolean>(false);
     const [isNavModalClose, setIsNavModalClose] = useState<boolean>(false);
 
-    console.log(isNavModalClose)
     useEffect(() => {
         const checkScrollTop = () => {
             let header = document.getElementsByClassName('containerFluid');
@@ -45,12 +42,9 @@ export const ClassicHeader = () => {
                             duration={500}
                             style={{cursor: "pointer"}}
                             className={style.logo}
-                            // activeClass={style.activeLink}
                             to="home"
                             title="Rasul"
-                            // onClick={() => {
-                            //    // setIsNavModalClose(true);
-                            // }}
+
                         >
                             {"  "}
                             <img src={logo} alt="Rasul"/>{" "}
